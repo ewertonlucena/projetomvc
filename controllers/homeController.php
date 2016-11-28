@@ -5,8 +5,20 @@
  * @author ewertonlucena@gmail.com
  */
 class homeController extends controller{
-    //controller padr?o
+    //controller padrão
     public function index() {
-        echo "Hello World";
+        echo "Por enquanto, tá tudo bem...</br></br></br>";
+        $usuario = new Usuario();
+        $usuario->setName('Ewerton');
+        
+        echo "Meu nome é ".$usuario->getName().'</br></br>';
+        
+        $dados = array(
+            'name' => $usuario->getName()
+        );
+        
+        $this->loadView('home', $dados);
+        
+        
     }
 }
