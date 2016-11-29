@@ -12,6 +12,7 @@ class Core {
        //$url = substr($_SERVER['PHP_SELF'], 10);//verifica url digitada e retira "index.php"
        $url = explode('index.php', $_SERVER['PHP_SELF']);
        $url = end($url);
+       $params = array();
        
        if (!empty($url)){ //Se variavel $url não estiver vazia
            //execute o código abaixo
@@ -36,7 +37,7 @@ class Core {
            //execução padrão para $url vazia
            $currentController = 'homeController';//set Controler = 'home'
            $currentAction = 'index';//set Action = 'index'
-           $params = array();
+           
        }
        
        require_once 'core/controller.php';
