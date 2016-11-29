@@ -10,9 +10,14 @@ class Core {
     
     public function run(){ //inicia class Core
        //$url = substr($_SERVER['PHP_SELF'], 10);//verifica url digitada e retira "index.php"
-       $url = explode('index.php', $_SERVER['PHP_SELF']);
-       $url = end($url);
+       //$url = explode('index.php', $_SERVER[]);
+       //$url = end($url);
+       $url = $_SERVER;
+       print_r($url);
+       exit;
        $params = array();
+       
+       
        
        if (!empty($url)){ //Se variavel $url não estiver vazia
            //execute o código abaixo
