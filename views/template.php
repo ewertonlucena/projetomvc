@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Título do site</title>
+        <link href="../assets/css/style.css" rel="stylesheet"/>
     </head>
     <body>
         <h1>Topo do meu site</h1>

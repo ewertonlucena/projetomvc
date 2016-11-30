@@ -5,6 +5,10 @@
  * @author ewertonlucena@gmail.com
  */
 class Fotos extends model{
+        
+    public function __construct() {
+        parent::__construct();
+    }
     
     public function getFotos() {
         $array = [];
