@@ -21,4 +21,11 @@ class homeController extends controller{
         $dados = array();
         $this->loadTemplate('sobre', $dados);
     }
+    
+    public function fotos(){
+        $fotos = new Fotos();
+        $dados['fotos'] = $fotos->getFotos();
+        
+        $this->loadTemplate('fotos', $dados);
+    }
 }
