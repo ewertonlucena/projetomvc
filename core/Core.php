@@ -13,7 +13,8 @@ class Core {
         $url = explode('index.php', $_SERVER['REQUEST_URI']);
         $url = end($url);
         $params = [];
-        if (!empty($url)) { //Se variavel $url não estiver vazia
+        
+        if (!empty($url) and $url != '/') { //Se variavel $url não estiver vazia
             //execute o código abaixo
             $url = explode('/', $url); //converte a url em array usando "/" como delimitador
             array_shift($url); //retira o primeiro valor do array $url
